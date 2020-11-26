@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- ... -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="tailwind.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d8a7feb48d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- ... -->
+  <div id="app" class="w-screen h-screen sm:h-full md:h-screen sm:py-4 md:py-0 bg-gray-100 flex justify-center items-center">
+  	<!-- Card -->
+  	<div class="w-4/6 h-4/5 sm:w-2/3 sm:h-full sm:block md:flex md:w-4/6 md:h-4/5 bg-white rounded-xl flex overflow-hidden shadow-lg">
+  		<!-- Bagian Kiri -->
+  		<div class="w-2/6 sm:w-full md:w-2/6 h-full py-12">
+  			<img class="w-32 h-32 rounded-full mx-auto" src="src/img/profile.jpg">
+  			<p class="font-bold text-gray-900 text-center mt-4 mb-2">Galih Rexy Hakiki</p>
+  			<p class="text-center text-gray-700">Web Developer</p>
+  			<p class="text-center text-gray-500">"Jangan bilang susah walaupun tidak mudah"</p>
+  			<div class="mx-6 flex justify-around mt-6">
+				<a href="https://api.whatsapp.com/send?phone=6289644269047" target="_blank">
+					<p class="text-gray-700 font-semibold">Whatsapp</p>
+					<i class="fab fa-whatsapp fa-2x text-gray-700 ml-5 mt-2"></i>
+				</a>
+				<a href="https://www.instagram.com/galih_rexy/" target="_blank">
+					<p class="text-gray-700 font-semibold">Instagram</p>
+					<i class="fab fa-instagram fa-2x text-gray-700 ml-5 mt-2"></i>
+				</a>
+				<a href="https://twitter.com/galih_rexy" target="_blank">
+					<p class="text-gray-700 font-semibold">Twitter</p>
+					<i class="fab fa-twitter fa-2x text-gray-700 ml-2 mt-2"></i>
+				</a>
+			</div>
+  		</div>
+  		<!-- Bagian Kanan -->
+  		<div class="w-4/6 sm:w-full md:w-4/6 h-full">
+  			<!-- Menu -->
+  			<div class="w-full flex space-x-2 justify-between">
+  				<div class="w-1/2 py-2 border-b-2 cursor-pointer " v-bind:class="{ 'border-indigo-400': toggle}" @click="toggle = true">
+  					<p class="text-center text-gray-700">Keterampilan</p>
+  				</div>
+  				<div class="w-1/2 py-2 border-b-2 cursor-pointer " v-bind:class="{ 'border-indigo-400': !toggle}" @click="toggle = false">
+  					<p class="text-center text-gray-700">Portofolio</p>
+  				</div>
+  			</div>
+        <!-- Keterampilan -->
+        <div v-show="toggle === true" class="sm:mb-6 md:mb-0">
+          <div class="grid grid-cols-4 space-y-10 -ml-6 sm:-ml-0 md:-ml-6">
+            <div class="text-center mt-10">
+              <img class="w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:w-16 md:h-16 mx-auto rounded-full" src="src/img/html.png">
+              <p class="text-center text-gray-700 font-semibold">HTML</p>
+            </div>
+            <div class="text-center">
+              <img class="w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:w-16 md:h-16 mx-auto rounded-full" src="src/img/css.png">
+              <p class="text-gray-700 font-semibold">CSS</p>
+            </div>
+            <div class="text-center">
+              <img class="w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:w-16 md:h-16 mx-auto rounded-full" src="src/img/js.png">
+              <p class="text-gray-700 font-semibold">Javascript</p>
+            </div>
+            <div class="text-center">
+              <img class="w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:w-16 md:h-16 mx-auto rounded-full" src="src/img/Bootstrap.png">
+              <p class="text-gray-700 font-semibold">Bootstrap</p>
+            </div>
+            <div class="text-center">
+              <img class="w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:w-16 md:h-16 mx-auto rounded-full" src="src/img/jquery.png">
+              <p class="text-gray-700 font-semibold">JQuery</p>
+            </div>
+            <div class="text-center">
+              <img class="w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:w-16 md:h-16 mx-auto rounded-full" src="src/img/vuejs.png">
+              <p class="text-gray-700 font-semibold">Vue JS</p>
+            </div>
+            <div class="text-center">
+              <img class="w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:w-16 md:h-16 mx-auto rounded-full" src="src/img/tailwind.png">
+              <p class="text-gray-700 font-semibold">Tailwind</p>
+            </div>
+            <div class="text-center">
+              <img class="w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:w-16 md:h-16 mx-auto rounded-full" src="src/img/php.png">
+              <p class="text-gray-700 font-semibold">PHP</p>
+            </div>
+            <div class="text-center">
+              <img class="w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:w-16 md:h-16 mx-auto rounded-full" src="src/img/mysql.png">
+              <p class="text-gray-700 font-semibold">MySql</p>
+            </div>
+            <div class="text-center">
+              <img class="w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:w-16 md:h-16 mx-auto rounded-full" src="src/img/git.png">
+              <p class="text-gray-700 font-semibold">Git</p>
+            </div>
+            <div class="text-center">
+              <img class="w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:w-16 md:h-16 mx-auto rounded-full" src="src/img/codeigniter.png">
+              <p class="text-gray-700 font-semibold">Codeigniter</p>
+            </div>
+            <div class="text-center">
+              <img class="w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:w-16 md:h-16 mx-auto rounded-full" src="src/img/laravel.jpg">
+              <p class="text-gray-700 font-semibold">Laravel</p>
+            </div>
+          </div>
+        </div>
+  			<!-- Portofolio -->
+  			<div v-if="toggle === false" class="w-full space-y-8 h-full pr-6 pl-2 pt-4 sm:mb-6 md:mb-0">
+          <!-- Per project -->
+  				<div class="w-full flex space-x-4 sm:ml-2 md:ml-0">
+  					<img @click="toggleDetail = true" class="w-56 sm:w-48 md:w-56 border border-gray-200 rounded-tl-3xl rounded-br-3xl hover:border-indigo-200 cursor-pointer" src="src/img/karya_shayna_frontend.jpg">
+  					<div class="h-24 overflow-hidden">
+	  					<p class="text-gray-800 font-semibold mt-1 cursor-pointer" @click="toggleDetail = true">Toko Online | Front-end</p>
+	  					<p class="text-gray-500 text-sm mt-1 sm:hidden md:block">Dibuat pada ‎01 ‎August ‎2020</p>
+	  					<div class="text-gray-700 text-sm flex space-x-2 mt-4 font-semibold">
+                <p class="text-sm text-gray-400 ">Bootstrap</p>
+                <p class="text-sm text-gray-400 ">Vue JS</p>
+                <p class="text-sm text-gray-400">API</p>      
+              </div>
+  					</div>
+  				</div>
+          <div class="w-full flex space-x-4 sm:ml-2 md:ml-0">
+            <img @click="toggleDetail = true" class="w-56 sm:w-48 md:w-56 border border-gray-200 rounded-tl-3xl rounded-br-3xl hover:border-indigo-200 cursor-pointer" src="src/img/karya_shayna_backend.jpg">
+            <div class="h-24 ml-2 overflow-hidden">
+              <p class="text-gray-800 font-semibold mt-1 cursor-pointer" @click="toggleDetail = true">Toko Online | Back-end</p>
+              <p class="text-gray-500 text-sm mt-1 sm:hidden md:block">Dibuat pada 04 Agustus 2020</p>
+              <div class="text-gray-700 text-sm flex space-x-2 mt-4 font-semibold">
+                <p class="text-sm text-gray-400 ">Laravel</p>
+                <p class="text-sm text-gray-400">API</p>
+                <p class="text-sm text-gray-400">MySql</p>      
+              </div>
+            </div>
+          </div>
+          <div class="w-full flex space-x-4 sm:ml-2 md:ml-0">
+            <img @click="toggleDetail = true" class="w-56 sm:w-48 md:w-56 border border-gray-200 rounded-tl-3xl rounded-br-3xl hover:border-indigo-200 cursor-pointer" src="src/img/karya_diagnokids.jpg">
+            <div class="h-24 ml-2 overflow-hidden">
+              <p class="text-gray-800 font-s cursor-pointeremibold mt-1" @click="toggleDetail = true">Aplikasi diagnosa penyakit</p>
+              <p class="text-gray-500 text-sm mt-1 sm:hidden md:block">Dibuat pada 02 Juni 2020</p>
+              <div class="text-gray-700 text-sm flex space-x-2 mt-4 font-semibold">
+                <p class="text-sm text-gray-400 ">Codeigniter</p>
+                <p class="text-sm text-gray-400">MySql</p>      
+                <p class="text-sm text-gray-400 ">JQuery</p>
+              </div>
+            </div>
+          </div>
+  			</div>
+  		</div>
+  	</div>
+
+    <!-- Detail Portofolio -->
+    <div v-if="toggleDetail === true" class="h-screen w-screen fixed flex justify-center items-center" @click="toggleDetail = false">
+      <div class="h-40 w-56 bg-white fixed flex justify-center items-center shadow-lg border border-gray-100 sm:-mt-64 md:-mt-0">
+        <p class="text-gray-700 font-semibold">Coming Soon...</p>
+      </div>
+    </div>
+
+    <!-- Loader -->
+    <div v-if="loader === true" class="w-screen h-screen bg-gray-100 fixed flex justify-center items-center">
+      <img class="w-16 h-16" src="src/img/eclipse.gif">
+    </div>
+  </div>
+
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
